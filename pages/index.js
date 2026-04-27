@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 import { format, subDays, parseISO } from 'date-fns'
 import { es } from 'date-fns/locale'
 import {
@@ -130,10 +131,15 @@ export default function Dashboard() {
             boxShadow: '0 0 12px #f59e0b'
           }} />
           <span style={{ fontWeight: 800, fontSize: 16, letterSpacing: '-0.02em' }}>
+        
             VENTAS<span style={{ color: '#f59e0b' }}>HQ</span>
           </span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <Link href="/inventario" style={{
+            padding: '6px 16px', borderRadius: 8, fontSize: 13, fontWeight: 600,
+            textDecoration: 'none', color: '#666', border: '1px solid transparent'
+          }}>Inventario</Link>
           <span style={{
             fontSize: 11, color: '#555', fontFamily: 'JetBrains Mono',
             background: '#111', border: '1px solid #222',
